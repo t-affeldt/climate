@@ -4,6 +4,8 @@ The complete weather bundle for any Minetest game.
 
 ![](https://raw.githubusercontent.com/t-affeldt/regional_weather/master/screenshot.webp)
 
+Source & Information on [Github](https://github.com/t-affeldt/climate) and the [Forum](https://forum.minetest.net/viewtopic.php?t=24569).
+
 ## Included Mods
 - Climate API: The heart and core of this pack. This mod provides a vast weather and effect engine
 - Regional Weather: What you will see on the screen. A bundle of weather presets and environment effects with beautiful visuals
@@ -13,7 +15,7 @@ The complete weather bundle for any Minetest game.
 
 ## Cloning Instructions
 This modpack uses submodules to always be up-to-date.
-You can download the pack as a ZIP file like normal, but cloning it using the command line takes a little bit of extra effort. Make sure you set the *recursive* flag in that case: ``git clone https://github.com/t-affeldt/climate.git --recursive``. If you forget to set this flag, then the mod folders will be empty. You will also need to run ``git pull`` from within every mod folder in order to update the modpack.
+Downloading the repository as a ZIP file leaves the mod folders empty, so you will have to download them manually. If you are using git commands then make sure you set the *recursive* flag instead: ``git clone https://github.com/t-affeldt/climate.git --recursive``. If you forget to set this flag, then the mod folders will be empty. You will also need to run ``git pull`` from within every mod folder in order to update the modpack.
 Check out the [Git SCM guide on submodules](https://git-scm.com/book/de/v2/Git-Tools-Submodule) for more information.
 
 ## Troubleshooting
@@ -32,10 +34,12 @@ If you experience __performance issues__, the *Performance* section of Climate A
 - ``/weather``: Display information on current weather effects. This command will show you current temperature and humidity, active weather presets and currently playing effects
 - ``/weather_settings``: Display current mod configuration in the chat
 - ``/weather_influences``: Display all different factors and how they affect you in this moment.
-- ``/weather_status``: Display a list of all installed weather presets and whether they have been forced on, turned off, or are running normally (auto).
+- ``/weather_status``: Display a list of all installed weather presets and whether they have been forced on, turned off, or are running normally (auto). If no weather presets are listed here then you need to install a weather mod like Regional Weather.
 - ``/grant <playername> weather``: Enable a specified player to modify the current weather.
-- ``/set_heat <value>``: Override the base heat value used to calculate local climate. Positive numbers will increase temperature by X degrees Fahrenheit, whereas negative values will lower it.
-- ``/set_humidity <value>``: Override the base humidity value used to calculate local climate. Positive numbers will increase humidity by X percent, whereas negative values will lower it.
+- ``/set_heat <value>``: Override global heat levels with given value.
+- ``/set_base_heat <value>``: Override the base heat value used to calculate local climate. Positive numbers will increase temperature by X degrees Fahrenheit, whereas negative values will lower it.
+- ``/set_humidity <value>``: Override global humidity levels with given value.
+- ``/set_base_humidity <value>``: Override the base humidity value used to calculate local climate. Positive numbers will increase humidity by X percent, whereas negative values will lower it.
 - ``/set_wind <x> <z>``: Override wind speed and direction. Higher absolute values result in stronger wind. The sign indicates direction.
 - ``/set_weather <weather> <on|off|auto>``: Set a weather preset to always be applied (on), disable it completely (off), or reset it to be applied automatically (auto). Turning presets on manually might result in partially missing effects (like no sound if you enable sandstorms but no storms). Use ``/weather_status`` for a full list of installed weather presets. The prefix is important.
 
@@ -51,6 +55,9 @@ Use ``/grant <player> moonphase`` to grant it.
 
 ## Configuration Options
 The individual mods offer a lot of customization options. Make sure to check the respective README files for more information.
+
+## Modding Information
+Check the [api_doc.md](https://github.com/t-affeldt/climate_api/blob/master/api_doc.md) for a (currently incomplete) documentation on how to register new weather presets and visual effects. Use my weather [presets](https://github.com/t-affeldt/regional_weather/tree/master/ca_weathers) and [effects](https://github.com/t-affeldt/regional_weather/tree/master/ca_effects) as an example. Ask in the [forum](https://forum.minetest.net/viewtopic.php?t=24569) or open an [issue](https://github.com/t-affeldt/climate_api/issues) if you run into problems. Also check the source code of predefined weather effects because they include usage documentation at the top of each file.
 
 ## License
 All parts of this modpack are using free software licenses.
