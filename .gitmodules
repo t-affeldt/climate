@@ -13,3 +13,6 @@
 [submodule "sailing_kit"]
 	path = sailing_kit
 	url = https://github.com/t-affeldt/sailing_kit.git
+[submodule "mobkit"]
+	path = mobkit
+	url = https://github.com/TheTermos/mobkit
