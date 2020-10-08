@@ -11,7 +11,9 @@ Source & Information on [Github](https://github.com/t-affeldt/climate) and the [
 - Regional Weather: What you will see on the screen. A bundle of weather presets and environment effects with beautiful visuals
 - Moon Phases: Makes your sky dynamic by cycling through eight different phases
 - Lightning by Auke Kok (sofar): Adds random lightning strikes during rainstorms
-- Sailing Kit: A fork of [Termos' sailboat](https://forum.minetest.net/viewtopic.php?t=23520) to support the new wind system.
+
+## Recommended Mods
+- [Sailing Kit](https://github.com/t-affeldt/sailing_kit): A fork of [Termos' sailboat](https://forum.minetest.net/viewtopic.php?t=23520) to support the new wind system.
 
 ## Cloning Instructions
 This modpack uses submodules to always be up-to-date.
